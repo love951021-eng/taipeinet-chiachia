@@ -1,569 +1,615 @@
 <!DOCTYPE html>
-<html lang="zh-TW" class="scroll-smooth">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>台北市新北市 北都有線電視/光纖寬頻網路專案申辦 | 業務朱家樺 0906-766-093</title>
-    <!-- Tailwind CSS CDN -->
+    <title>北都光世紀 - 光纖網路+第四台優惠方案估算</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts Inter & Noto Sans TC -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['"Noto Sans TC"', 'sans-serif'],
-                    },
                     colors: {
-                        beidu: {
+                        brand: {
                             blue: '#005bac',
-                            darkblue: '#003e78',
-                            cyan: '#00a3e0',
-                            orange: '#ff6600',
-                            green: '#06C755', // LINE Brand Color
-                            lightbg: '#f0f7fc',
+                            skyblue: '#009df8',
+                            yellow: '#ffcc00',
+                            red: '#e60012',
+                            line: '#06C755',
+                            lineHover: '#05b34c',
+                            lightbg: '#f0f7ff'
                         }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        .gradient-banner {
-            background: linear-gradient(135deg, #003e78 0%, #005bac 50%, #00a3e0 100%);
+        .gradient-bg {
+            background: linear-gradient(135deg, #005bac 0%, #009df8 100%);
         }
         .pulse-btn {
-            animation: pulse-ring 2s infinite;
+            animation: pulse-animation 2s infinite;
         }
-        @keyframes pulse-ring {
-            0% { box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.6); }
-            70% { box-shadow: 0 0 0 14px rgba(255, 102, 0, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 102, 0, 0); }
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0 rgba(6, 199, 85, 0.6); }
+            70% { box-shadow: 0 0 0 12px rgba(6, 199, 85, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 199, 85, 0); }
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-24 md:pb-0">
+<body class="bg-slate-50 font-sans text-slate-800 pb-28 md:pb-12">
 
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+    <!-- Header / Navbar -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-100">
         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <span class="bg-beidu-blue text-white px-2.5 py-1 rounded-lg text-xs font-black tracking-wider uppercase">北都有線電視</span>
-                <span class="text-slate-800 font-bold text-base md:text-lg">雙北光纖寬頻 / 第四台</span>
+            <div class="flex items-center gap-2">
+                <div class="bg-brand-blue text-white w-9 h-9 rounded-full flex items-center justify-center font-black text-xl">
+                    T
+                </div>
+                <div>
+                    <h1 class="text-xl font-black text-brand-blue leading-none tracking-wider">北都 TAIPEINET</h1>
+                    <p class="text-xs text-slate-500 tracking-tight">TAIPEI DIGITAL CABLE</p>
+                </div>
             </div>
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="#plans" class="text-slate-600 hover:text-beidu-blue font-medium transition">超值方案</a>
-                <a href="#regions" class="text-slate-600 hover:text-beidu-blue font-medium transition">服務區域</a>
-                <a href="#calculator" class="text-slate-600 hover:text-beidu-blue font-medium transition">試算省多少</a>
-                <a href="#faq" class="text-slate-600 hover:text-beidu-blue font-medium transition">申辦須知</a>
-                <a href="https://line.me/ti/p/~0906766093" target="_blank" class="bg-beidu-green hover:bg-emerald-600 text-white font-bold px-3 py-2 rounded-full flex items-center space-x-1.5 shadow-sm text-sm transition">
-                    <i class="fa-brands fa-line text-lg"></i>
-                    <span>LINE: 0906766093</span>
+            <div class="flex items-center gap-2">
+                <a href="https://line.me/R/ti/p/0906766093" target="_blank" class="hidden sm:flex bg-brand-line hover:bg-brand-lineHover text-white font-bold text-xs px-3 py-2 rounded-full transition shadow-md items-center gap-1.5">
+                    <i class="fa-brands fa-line text-base"></i> LINE 諮詢 (佳佳)
                 </a>
-                <a href="tel:0906766093" class="bg-beidu-orange hover:bg-orange-600 text-white font-bold px-4 py-2 rounded-full flex items-center space-x-2 shadow-md transition transform hover:-translate-y-0.5 text-sm">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>朱家樺：0906-766-093</span>
+                <a href="#calculator" class="bg-brand-red hover:bg-red-700 text-white font-bold text-xs sm:text-sm px-3.5 py-2 rounded-full transition shadow-md flex items-center gap-1">
+                    <i class="fa-solid fa-calculator"></i> 估算優惠
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="gradient-banner text-white relative overflow-hidden py-12 md:py-20 px-4">
-        <div class="absolute -top-12 -right-12 w-64 h-64 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>
-        <div class="absolute -bottom-16 -left-16 w-80 h-80 rounded-full bg-beidu-cyan/20 blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center space-x-2 bg-white/15 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold mb-6 text-cyan-100 shadow-inner">
-                <i class="fa-solid fa-location-dot text-amber-300"></i>
-                <span>台北市・新北市 雙北地區家用網路/第四台速辦</span>
+    <!-- Hero Banner -->
+    <section class="gradient-bg text-white relative overflow-hidden py-12 md:py-16">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-5xl mx-auto px-4 relative z-10 text-center">
+            <div class="inline-block bg-brand-yellow text-brand-blue font-black px-4 py-1 rounded-full text-sm md:text-base mb-4 shadow-md uppercase tracking-wider">
+                <i class="fa-solid fa-bullhorn mr-1 text-brand-red"></i> 驚喜限時優惠來了！
             </div>
-
-            <h1 class="text-2xl sm:text-4xl md:text-5xl font-black leading-tight mb-4 tracking-tight">
-                台北市/新北市 家中網路+第四台費用<br class="hidden sm:inline">
-                <span class="text-amber-300 underline decoration-beidu-orange decoration-4 underline-offset-8">總居高不下嗎？</span>
-            </h1>
-
-            <p class="text-base sm:text-xl text-slate-100 font-medium mb-8 max-w-2xl mx-auto leading-relaxed">
-                放心轉換 <strong class="text-amber-300 font-bold">北都有線電視</strong>！<br class="sm:hidden">同時申辦光纖網路＋有線電視（頻道全開），全家連網順暢超快。
+            <h2 class="text-3xl md:text-5xl font-black mb-3 tracking-tight leading-tight">
+                北都光世紀 <span class="text-brand-yellow">光纖網路 + 第四台</span>
+            </h2>
+            <p class="text-lg md:text-2xl font-medium text-blue-100 mb-6 max-w-2xl mx-auto">
+                輕鬆轉換無煩惱・舊約未到期也能享有<span class="underline decoration-brand-yellow decoration-4 underline-offset-4 font-bold text-white">轉約補償</span>！
             </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto">
+                <a href="#plans" class="bg-brand-yellow hover:bg-yellow-400 text-slate-900 font-extrabold text-lg px-6 py-3 rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-bolt text-brand-red"></i> 查看優惠方案
+                </a>
+                <a href="https://line.me/R/ti/p/0906766093" target="_blank" class="bg-brand-line hover:bg-brand-lineHover text-white font-bold text-lg px-6 py-3 rounded-xl backdrop-blur-sm transition flex items-center justify-center gap-2 shadow-lg">
+                    <i class="fa-brands fa-line text-xl"></i> 私訊佳佳 LINE
+                </a>
+            </div>
+        </div>
+    </section>
 
-            <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-8">
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl flex items-center space-x-2 text-sm font-bold shadow-sm">
-                    <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
-                    <span>免安裝費</span>
+    <!-- Features Grid -->
+    <section class="max-w-6xl mx-auto px-4 -mt-6 relative z-20">
+        <div class="bg-white rounded-2xl shadow-xl p-6 border border-slate-100">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-3 rounded-xl bg-blue-50/50 flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center text-xl mb-2">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base">免收裝機費</h3>
+                    <p class="text-xs text-slate-500 mt-1">線路設定費 0 元</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl flex items-center space-x-2 text-sm font-bold shadow-sm">
-                    <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
-                    <span>免線路費</span>
+                <div class="p-3 rounded-xl bg-blue-50/50 flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center text-xl mb-2">
+                        <i class="fa-solid fa-vault"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base">設備押金</h3>
+                    <p class="text-xs text-slate-500 mt-1">網路設備僅需 1,500 元</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl flex items-center space-x-2 text-sm font-bold shadow-sm">
-                    <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
-                    <span>免設定費</span>
+                <div class="p-3 rounded-xl bg-blue-50/50 flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center text-xl mb-2">
+                        <i class="fa-solid fa-tv"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base">機上盒免費</h3>
+                    <p class="text-xs text-slate-500 mt-1">第一台機上盒免費租借</p>
+                </div>
+                <div class="p-3 rounded-xl bg-blue-50/50 flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center text-xl mb-2">
+                        <i class="fa-solid fa-plus-circle"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base">第二台超值</h3>
+                    <p class="text-xs text-slate-500 mt-1">加購僅需 500 元/台</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans Section -->
+    <section id="plans" class="max-w-6xl mx-auto px-4 py-12">
+        <div class="text-center mb-10">
+            <span class="text-brand-blue font-bold tracking-wider text-sm uppercase bg-blue-100 px-3 py-1 rounded-full">SPECIAL OFFERS</span>
+            <h2 class="text-3xl font-black text-slate-900 mt-2">熱門跳檔超值方案</h2>
+            <p class="text-slate-600 mt-1">申辦網路加贈第四台（全頻道收視），點擊方案即可立即試算！</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Plan 1 -->
+            <div class="bg-white rounded-2xl border-2 border-slate-200 hover:border-brand-blue shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col relative group">
+                <div class="bg-slate-100 py-2 text-center text-slate-600 text-xs font-bold border-b border-slate-200">
+                    家庭輕量首選
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-black text-slate-900">120M / 40M</h3>
+                            <p class="text-sm font-semibold text-brand-blue">光纖網路 + 第四台</p>
+                        </div>
+                        <span class="bg-blue-100 text-brand-blue text-xs font-bold px-2.5 py-1 rounded-md">熱銷款</span>
+                    </div>
+
+                    <div class="my-4 py-4 border-y border-slate-100">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm text-slate-500 font-bold">跳檔價</span>
+                            <span class="text-4xl font-black text-brand-red">$2,600</span>
+                            <span class="text-sm text-slate-500">元/年</span>
+                        </div>
+                        <div class="mt-2 bg-yellow-50 border border-yellow-200 text-yellow-800 text-xs font-bold px-3 py-1.5 rounded-lg inline-block">
+                            <i class="fa-solid fa-gift text-brand-red mr-1"></i> 可用 12+?? 個月
+                        </div>
+                    </div>
+
+                    <ul class="space-y-2.5 text-sm text-slate-600 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> 全頻道第四台節目收視</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> 免收線路設定裝機費</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> 第一台高清機上盒免費</li>
+                    </ul>
+
+                    <button onclick="selectPlan('120M / 40M (跳檔價 $2600/年)')" class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition shadow-md flex items-center justify-center gap-2">
+                        選擇此方案試算 <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
                 </div>
             </div>
 
-            <!-- Hero Action Card -->
-            <div class="bg-white text-slate-800 p-6 rounded-2xl shadow-2xl max-w-lg mx-auto border border-slate-100">
-                <div class="text-xs font-bold text-beidu-blue uppercase tracking-widest mb-1">雙北本區負責業務</div>
-                <div class="text-2xl font-black mb-1 flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-user-check text-beidu-blue"></i>
-                    <span>朱家樺</span>
+            <!-- Plan 2 -->
+            <div class="bg-white rounded-2xl border-2 border-brand-red shadow-xl transition-all duration-300 overflow-hidden flex flex-col relative transform md:-translate-y-2">
+                <div class="bg-brand-red text-white py-2 text-center text-xs font-bold tracking-wider uppercase">
+                    <i class="fa-solid fa-fire mr-1"></i> 最佳 CP 值・全家推薦
                 </div>
-                <a href="tel:0906766093" class="text-3xl sm:text-4xl font-black text-beidu-orange hover:text-orange-600 block my-2 tracking-wider transition">
-                    <i class="fa-solid fa-phone-volume mr-1 text-2xl sm:text-3xl animate-bounce"></i> 0906-766-093
-                </a>
-                
-                <div class="inline-flex items-center space-x-1.5 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-lg text-sm font-bold my-1 border border-emerald-200">
-                    <i class="fa-brands fa-line text-beidu-green text-lg"></i>
-                    <span>LINE ID: <strong class="text-emerald-800">0906766093</strong></span>
-                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-3xl font-black text-slate-900">200M / 60M</h3>
+                            <p class="text-sm font-bold text-brand-blue">光纖網路 + 第四台</p>
+                        </div>
+                        <span class="bg-brand-yellow text-slate-900 text-xs font-black px-2.5 py-1 rounded-md shadow-sm">最熱門</span>
+                    </div>
 
-                <p class="text-xs text-slate-500 my-2">問問不用錢 有問有省錢！來電或加 LINE 另有超值獨家加碼優惠</p>
+                    <div class="my-4 py-4 border-y border-slate-100">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm text-slate-500 font-bold">跳檔價</span>
+                            <span class="text-4xl font-black text-brand-red">$3,600</span>
+                            <span class="text-sm text-slate-500">元/年</span>
+                        </div>
+                        <div class="mt-2 bg-yellow-50 border border-yellow-200 text-yellow-800 text-xs font-bold px-3 py-1.5 rounded-lg inline-block">
+                            <i class="fa-solid fa-gift text-brand-red mr-1"></i> 可用 12+?? 個月
+                        </div>
+                    </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-4">
-                    <a href="tel:0906766093" class="bg-beidu-orange hover:bg-orange-600 text-white font-bold py-3 rounded-xl shadow-lg transition flex items-center justify-center space-x-2 pulse-btn">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>電話直接撥號</span>
-                    </a>
-                    <a href="https://line.me/ti/p/~0906766093" target="_blank" class="bg-beidu-green hover:bg-emerald-600 text-white font-bold py-3 rounded-xl shadow-lg transition flex items-center justify-center space-x-2">
-                        <i class="fa-brands fa-line text-xl"></i>
-                        <span>加 LINE 線上詢問</span>
-                    </a>
-                </div>
-                
-                <div class="flex gap-2 mt-2">
-                    <button onclick="copyPhoneNumber()" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center space-x-1">
-                        <i class="fa-regular fa-copy"></i>
-                        <span>複製電話號碼</span>
+                    <ul class="space-y-2.5 text-sm text-slate-600 mb-6 flex-1">
+                        <li class="flex items-center gap-2 font-medium text-slate-800"><i class="fa-solid fa-check text-green-500"></i> 高速穩定追劇/遊戲不受限</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> 含全頻道第四台收視</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> 免收裝機設定費</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> 舊約違約金折抵補償</li>
+                    </ul>
+
+                    <button onclick="selectPlan('200M / 60M (跳檔價 $3600/年)')" class="w-full bg-brand-red hover:bg-red-700 text-white font-black py-3.5 rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+                        搶先申辦此方案 <i class="fa-solid fa-arrow-right text-xs"></i>
                     </button>
-                    <button onclick="copyLineId()" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center space-x-1">
-                        <i class="fa-regular fa-copy"></i>
-                        <span>複製 LINE ID</span>
+                </div>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="bg-white rounded-2xl border-2 border-slate-200 hover:border-brand-blue shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col relative group">
+                <div class="bg-slate-100 py-2 text-center text-slate-600 text-xs font-bold border-b border-slate-200">
+                    單純收看電視
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-black text-slate-900">單辦第四台</h3>
+                            <p class="text-sm font-semibold text-slate-500">全頻道高清精彩節目</p>
+                        </div>
+                        <span class="bg-slate-200 text-slate-700 text-xs font-bold px-2.5 py-1 rounded-md">單辦優選</span>
+                    </div>
+
+                    <div class="my-4 py-4 border-y border-slate-100">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm text-slate-500 font-bold">跳檔價</span>
+                            <span class="text-4xl font-black text-brand-red">$1,800</span>
+                            <span class="text-sm text-slate-500">元/年</span>
+                        </div>
+                        <div class="mt-2 bg-yellow-50 border border-yellow-200 text-yellow-800 text-xs font-bold px-3 py-1.5 rounded-lg inline-block">
+                            <i class="fa-solid fa-gift text-brand-red mr-1"></i> 可用 6+?? 個月
+                        </div>
+                    </div>
+
+                    <ul class="space-y-2.5 text-sm text-slate-600 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> 上百台熱門頻道收看</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> 第一台數位機上盒免費</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> 線路畫質清晰穩定</li>
+                    </ul>
+
+                    <button onclick="selectPlan('單辦第四台 (跳檔價 $1800/年)')" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-3 rounded-xl transition shadow-md flex items-center justify-center gap-2">
+                        選擇此方案試算 <i class="fa-solid fa-arrow-right text-xs"></i>
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="calculator" class="py-12 bg-beidu-lightbg px-4">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-8">
-                <span class="bg-beidu-blue/10 text-beidu-blue font-bold text-xs px-3 py-1 rounded-full">費用比較估算</span>
-                <h2 class="text-2xl md:text-3xl font-black mt-2 text-slate-800">算算看！轉換北都有線電視每年為您省多少？</h2>
-                <p class="text-sm text-slate-600 mt-1">輸入台北/新北您目前每月支付的網路＋第四台總費用</p>
-            </div>
+    <!-- Calculator Section -->
+    <section id="calculator" class="bg-brand-lightbg py-12 border-y border-blue-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-blue-100">
+                <div class="text-center mb-8">
+                    <span class="bg-brand-yellow text-slate-900 text-xs font-extrabold px-3 py-1 rounded-full uppercase">速算系統</span>
+                    <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-2">想知道您家可以優惠多少？</h2>
+                    <p class="text-slate-600 text-sm mt-1">選擇您的居住行政區與舊合約狀況，快速為您試算補償與月均價！</p>
+                </div>
 
-            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-slate-100">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-                    <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">目前每月的網路+第四台費用 (元)：</label>
-                        <div class="relative">
-                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 font-bold">$</span>
-                            <input type="number" id="currentCost" value="1000" min="0" step="50" oninput="calculateSavings()" 
-                                class="w-full pl-8 pr-4 py-3 border-2 border-slate-200 rounded-xl font-bold text-lg focus:border-beidu-blue focus:outline-none transition">
+                <form id="calcForm" onsubmit="calculateSavings(event)" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">
+                                <i class="fa-solid fa-location-dot text-brand-blue mr-1"></i> 居住區域 (大台北地區)
+                            </label>
+                            <select id="regionSelect" class="w-full border-2 border-slate-200 rounded-xl p-3 text-slate-700 font-medium focus:border-brand-blue focus:outline-none transition">
+                                <optgroup label="台北市">
+                                    <option value="大安區">大安區</option>
+                                    <option value="信義區">信義區</option>
+                                    <option value="中山區">中山區</option>
+                                    <option value="內湖區">內湖區</option>
+                                    <option value="松山區">松山區</option>
+                                    <option value="士林區">士林區</option>
+                                    <option value="北投區">北投區</option>
+                                    <option value="文山區">文山區</option>
+                                    <option value="中正區">中正區</option>
+                                    <option value="萬華區">萬華區</option>
+                                    <option value="大同區">大同區</option>
+                                    <option value="南港區">南港區</option>
+                                </optgroup>
+                                <optgroup label="新北市">
+                                    <option value="板橋區">板橋區</option>
+                                    <option value="三重區">三重區</option>
+                                    <option value="新莊區">新莊區</option>
+                                    <option value="中和區">中和區</option>
+                                    <option value="永和區">永和區</option>
+                                    <option value="其他區域">其他新北市區域</option>
+                                </optgroup>
+                            </select>
                         </div>
-                        <p class="text-xs text-slate-400 mt-2">* 台北/新北家庭每月傳統費用約 $1,000 - $1,400 元</p>
 
-                        <div class="mt-4">
-                            <label class="block text-sm font-bold text-slate-700 mb-2">選擇北都有線電視欲申辦方案：</label>
-                            <select id="selectedPlan" onchange="calculateSavings()" class="w-full py-3 px-4 border-2 border-slate-200 rounded-xl font-bold text-slate-700 focus:border-beidu-blue focus:outline-none transition">
-                                <option value="3600">200M/60M 超值熱門款 ($3,600/年)</option>
-                                <option value="2600">120M/40M 基礎劃算款 ($2,600/年)</option>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">
+                                <i class="fa-solid fa-wifi text-brand-blue mr-1"></i> 意向申辦方案
+                            </label>
+                            <select id="selectedPlan" class="w-full border-2 border-slate-200 rounded-xl p-3 text-slate-700 font-medium focus:border-brand-blue focus:outline-none transition">
+                                <option value="200M / 60M (跳檔價 $3600/年)">200M/60M + 第四台 ($3600/年)</option>
+                                <option value="120M / 40M (跳檔價 $2600/年)">120M/40M + 第四台 ($2600/年)</option>
+                                <option value="單辦第四台 (跳檔價 $1800/年)">單辦第四台 ($1800/年)</option>
                             </select>
                         </div>
                     </div>
 
-                    <div class="bg-gradient-to-br from-beidu-darkblue to-beidu-blue text-white rounded-xl p-6 text-center shadow-inner flex flex-col justify-center">
-                        <div class="text-xs font-semibold text-cyan-200 uppercase tracking-widest">預估每年可省下</div>
-                        <div id="annualSavings" class="text-4xl md:text-5xl font-black text-amber-300 my-2">$ 8,400</div>
-                        <p class="text-xs text-slate-200">
-                            北都有線電視平均每月只需約 <span id="monthlyEquivalent" class="font-bold text-white">$ 300</span> 元<br>
-                            （包含光纖網路 + 有線電視全頻道）
-                        </p>
-                        <div class="mt-4 pt-4 border-t border-white/20">
-                            <a href="tel:0906766093" class="inline-block w-full bg-beidu-orange hover:bg-orange-600 text-white font-bold py-2.5 rounded-lg transition shadow">
-                                立即省錢！來電專員朱家樺
-                            </a>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">
+                            <i class="fa-solid fa-file-contract text-brand-blue mr-1"></i> 目前其他業者合約狀況
+                        </label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <label class="border-2 border-slate-200 rounded-xl p-3 flex items-center gap-3 cursor-pointer hover:border-brand-blue transition">
+                                <input type="radio" name="contractStatus" value="未到期" checked class="w-4 h-4 text-brand-blue">
+                                <div>
+                                    <div class="font-bold text-sm text-slate-800">舊約未到期</div>
+                                    <div class="text-xs text-slate-500">可享轉約違約金補償</div>
+                                </div>
+                            </label>
+                            <label class="border-2 border-slate-200 rounded-xl p-3 flex items-center gap-3 cursor-pointer hover:border-brand-blue transition">
+                                <input type="radio" name="contractStatus" value="已到期/新辦" class="w-4 h-4 text-brand-blue">
+                                <div>
+                                    <div class="font-bold text-sm text-slate-800">已到期 / 新申辦</div>
+                                    <div class="text-xs text-slate-500">享最優首辦加碼月份</div>
+                                </div>
+                            </label>
                         </div>
                     </div>
+
+                    <button type="submit" class="w-full bg-brand-yellow hover:bg-yellow-400 text-slate-900 font-black text-lg py-3.5 rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calculator"></i> 開始估算專屬優惠
+                    </button>
+                </form>
+
+                <div id="resultBox" class="hidden mt-6 bg-slate-900 text-white p-6 rounded-2xl relative overflow-hidden">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-brand-yellow uppercase tracking-wider">試算結果產出</span>
+                            <h3 class="text-xl font-black text-white" id="resRegion">台北市大安區 預估結果</h3>
+                        </div>
+                        <span class="bg-green-500/20 text-green-400 text-xs font-bold px-3 py-1 rounded-full border border-green-500/30">
+                            符合安裝條件
+                        </span>
+                    </div>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-300">
+                            <span>選擇方案：</span>
+                            <span class="font-bold text-white" id="resPlan">200M/60M + 第四台</span>
+                        </div>
+                        <div class="flex justify-between text-slate-300">
+                            <span>線路設定裝機費：</span>
+                            <span class="font-bold text-green-400">現省 $1,500 元 (免費)</span>
+                        </div>
+                        <div class="flex justify-between text-slate-300">
+                            <span>合約狀態優惠：</span>
+                            <span class="font-bold text-brand-yellow" id="resComp">享舊合約轉約加補償機制</span>
+                        </div>
+                        <div class="flex justify-between text-slate-300 items-baseline pt-2 border-t border-slate-800">
+                            <span class="font-bold text-slate-200">折算預估平均月付：</span>
+                            <span class="text-3xl font-black text-brand-yellow" id="resMonthly">$199 <span class="text-xs font-normal text-slate-400">元/月起</span></span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex flex-col sm:flex-row gap-3">
+                        <a href="https://line.me/R/ti/p/0906766093" target="_blank" class="flex-1 bg-brand-line hover:bg-brand-lineHover text-white font-bold py-2.5 px-4 rounded-xl text-center text-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-line text-lg"></i> LINE 私訊 佳佳 發送試算結果
+                        </a>
+                        <a href="https://line.me/R/ti/p/0906682710" target="_blank" class="flex-1 bg-brand-blue hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-xl text-center text-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-line text-lg"></i> LINE 私訊 小呂 發送試算結果
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="plans" class="py-12 md:py-20 px-4 max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-            <span class="bg-beidu-blue/10 text-beidu-blue font-bold text-xs px-3 py-1 rounded-full">雙北超值專案價格</span>
-            <h2 class="text-2xl md:text-4xl font-black mt-2 text-slate-800">熱門申辦方案清單</h2>
-            <p class="text-slate-600 text-sm md:text-base mt-2">同時申辦光纖網路（提供 5G 雙頻 Wi-Fi）＋ 有線電視（頻道全開）</p>
+    <!-- Agents Section (Integrated with Jia-Jia's LINE QR Code) -->
+    <section id="contacts" class="max-w-5xl mx-auto px-4 py-12">
+        <div class="text-center mb-10">
+            <span class="text-brand-blue font-bold tracking-wider text-sm uppercase bg-blue-100 px-3 py-1 rounded-full">DIRECT CONTACT</span>
+            <h2 class="text-3xl font-black text-slate-900 mt-2">專案經理 一對一專屬服務</h2>
+            <p class="text-slate-600 mt-1">可以直接掃描 LINE QR Code、點擊連結或一鍵撥打電話諮詢！</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-            
-            <!-- Plan 1: 120M -->
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all border border-slate-200 p-6 md:p-8 flex flex-col justify-between relative overflow-hidden">
-                <div>
-                    <div class="inline-block bg-slate-100 text-slate-700 font-bold text-xs px-3 py-1 rounded-full mb-4">基礎小資首選</div>
-                    <h3 class="text-2xl font-black text-slate-800">120M / 40M</h3>
-                    <p class="text-xs text-slate-500 mt-1">適合日常上網、追劇、網路社群的小資家庭</p>
-
-                    <div class="my-6">
-                        <span class="text-4xl md:text-5xl font-black text-beidu-blue">$ 2,600</span>
-                        <span class="text-slate-500 font-medium">元 / 年</span>
-                    </div>
-
-                    <ul class="space-y-3 text-sm text-slate-700 mb-8 border-t border-slate-100 pt-6">
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
-                            <span>同時申辦 <strong>光纖網路</strong></span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-wifi text-beidu-cyan mt-1"></i>
-                            <span>免費提供 <strong>5G 雙頻 Wi-Fi</strong> 設備</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-tv text-beidu-blue mt-1"></i>
-                            <span>有線電視 <strong>頻道全開</strong></span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-gift text-beidu-orange mt-1"></i>
-                            <span class="text-beidu-orange font-bold">專屬首裝優惠：業務加贈 X 個月</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-shield-halved text-slate-400 mt-1"></i>
-                            <span>免安裝費、免線路費、免設定費</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="space-y-2">
-                    <a href="tel:0906766093" class="w-full bg-beidu-blue hover:bg-beidu-darkblue text-white font-bold py-3.5 rounded-xl text-center shadow transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>電話申辦 120M 方案</span>
-                    </a>
-                    <a href="https://line.me/ti/p/~0906766093" target="_blank" class="w-full bg-emerald-50 hover:bg-emerald-100 text-beidu-green font-bold py-2.5 rounded-xl text-center border border-emerald-200 transition flex items-center justify-center space-x-2 text-sm">
-                        <i class="fa-brands fa-line text-lg"></i>
-                        <span>加 LINE 詢問 120M 方案</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Plan 2: 200M (Featured) -->
-            <div class="bg-white rounded-2xl shadow-xl transition-all border-2 border-beidu-orange p-6 md:p-8 flex flex-col justify-between relative overflow-hidden">
-                <div class="absolute top-0 right-0 bg-beidu-orange text-white font-black text-xs px-4 py-1.5 rounded-bl-xl shadow-sm">
-                    🔥 雙北超值熱門爆款
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <!-- Agent 1: 朱家樺 (佳佳) - Featuring the LINE QR Code -->
+            <div class="bg-white rounded-2xl p-6 border-2 border-brand-red shadow-xl transition flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-brand-red text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                    線上快速服務
                 </div>
 
                 <div>
-                    <div class="inline-block bg-orange-100 text-beidu-orange font-bold text-xs px-3 py-1 rounded-full mb-4">全家連網推薦</div>
-                    <h3 class="text-2xl font-black text-slate-800">200M / 60M</h3>
-                    <p class="text-xs text-slate-500 mt-1">多人多裝置同步追劇、線上遊戲流暢不延遲</p>
-
-                    <div class="my-6">
-                        <span class="text-4xl md:text-5xl font-black text-beidu-orange">$ 3,600</span>
-                        <span class="text-slate-500 font-medium">元 / 年</span>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-2xl font-bold border-2 border-brand-red/30 shrink-0">
+                            <i class="fa-solid fa-user-nurse"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-slate-400 tracking-wider">專案經理</span>
+                            <h3 class="text-xl font-black text-slate-900">朱家樺 <span class="text-sm font-bold text-brand-red">(佳佳)</span></h3>
+                            <p class="text-xs text-pink-600 font-semibold"><i class="fa-solid fa-heart text-[10px] mr-1"></i> 歡迎私訊佳佳我幫您計算方案！</p>
+                        </div>
                     </div>
 
-                    <ul class="space-y-3 text-sm text-slate-700 mb-8 border-t border-slate-100 pt-6">
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
-                            <span>同時申辦 <strong>光纖網路</strong></span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-wifi text-beidu-cyan mt-1"></i>
-                            <span>免費提供 <strong>5G 雙頻 Wi-Fi</strong> 設備</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-tv text-beidu-blue mt-1"></i>
-                            <span>有線電視 <strong>頻道全開</strong></span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-gift text-beidu-orange mt-1"></i>
-                            <span class="text-beidu-orange font-bold">專屬首裝優惠：業務加贈 X 個月</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-shield-halved text-slate-400 mt-1"></i>
-                            <span>免安裝費、免線路費、免設定費</span>
-                        </li>
-                    </ul>
+                    <!-- LINE QR Code Integration Box -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 mb-4 text-center">
+                        <p class="text-xs font-bold text-slate-600 mb-2 flex items-center justify-center gap-1">
+                            <i class="fa-brands fa-line text-brand-line text-base"></i> 掃描條碼加入佳佳 LINE 好友
+                        </p>
+                        <div class="relative group cursor-pointer inline-block" onclick="openQrModal()">
+                            <img src="image_2.png" alt="朱家樺佳佳 LINE QR Code" class="w-36 h-36 mx-auto rounded-lg border-2 border-white shadow-md group-hover:scale-105 transition-transform duration-200">
+                            <div class="absolute inset-0 bg-black/40 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i> 點擊放大
+                            </div>
+                        </div>
+                        <span class="text-[11px] text-slate-400 block mt-1">手機用戶可直接點擊下方連結私訊</span>
+                    </div>
+
+                    <div class="bg-slate-50 p-2.5 rounded-xl mb-4 text-center border border-slate-100">
+                        <span class="text-xs text-slate-500 block mb-0.5">專線號碼</span>
+                        <a href="tel:0906766093" class="text-2xl font-black text-brand-red hover:underline tracking-wider">0906-766093</a>
+                    </div>
                 </div>
 
                 <div class="space-y-2">
-                    <a href="tel:0906766093" class="w-full bg-beidu-orange hover:bg-orange-600 text-white font-black py-3.5 rounded-xl text-center shadow-lg transition flex items-center justify-center space-x-2 pulse-btn">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>電話申辦 200M 方案 (朱家樺)</span>
+                    <a href="https://line.me/R/ti/p/0906766093" target="_blank" class="w-full bg-brand-line hover:bg-brand-lineHover text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition shadow-md flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-line text-xl"></i> 私訊佳佳 LINE (一鍵開啟)
                     </a>
-                    <a href="https://line.me/ti/p/~0906766093" target="_blank" class="w-full bg-emerald-50 hover:bg-emerald-100 text-beidu-green font-bold py-2.5 rounded-xl text-center border border-emerald-200 transition flex items-center justify-center space-x-2 text-sm">
-                        <i class="fa-brands fa-line text-lg"></i>
-                        <span>加 LINE 諮詢 200M 方案</span>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="tel:0906766093" class="bg-brand-red hover:bg-red-700 text-white text-center font-bold py-2 rounded-xl text-sm transition flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-phone"></i> 打電話
+                        </a>
+                        <button onclick="copyPhone('0906766093')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2 rounded-xl text-sm transition flex items-center justify-center gap-1.5">
+                            <i class="fa-regular fa-copy"></i> 複製號碼
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent 2: 呂建甫 (小呂) -->
+            <div class="bg-white rounded-2xl p-6 border-2 border-slate-100 hover:border-brand-blue shadow-lg transition flex flex-col justify-between relative overflow-hidden">
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center text-2xl font-bold border-2 border-brand-blue/30 shrink-0">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-slate-400 tracking-wider">專案經理</span>
+                            <h3 class="text-xl font-black text-slate-900">呂建甫 <span class="text-sm font-bold text-brand-blue">(小呂)</span></h3>
+                            <p class="text-xs text-green-600 font-semibold"><i class="fa-solid fa-circle text-[10px] mr-1"></i> LINE / 電話 即時線上服務</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-xl mb-6 text-center border border-slate-100">
+                        <span class="text-xs text-slate-500 block mb-1">專線號碼 / LINE ID</span>
+                        <a href="tel:0906682710" class="text-2xl font-black text-brand-blue hover:underline tracking-wider">0906-682710</a>
+                        <p class="text-xs text-slate-400 mt-2">提供台北市/新北市全區申辦評估</p>
+                    </div>
+                </div>
+
+                <div class="space-y-2 mt-auto">
+                    <a href="https://line.me/R/ti/p/0906682710" target="_blank" class="w-full bg-brand-line hover:bg-brand-lineHover text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition shadow-md flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-line text-xl"></i> 加 LINE 私訊小呂 估算方案
                     </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="regions" class="py-12 bg-white border-y border-slate-200 px-4">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-8">
-                <span class="bg-beidu-blue/10 text-beidu-blue font-bold text-xs px-3 py-1 rounded-full">雙北服務範圍</span>
-                <h2 class="text-2xl md:text-3xl font-black mt-2 text-slate-800">台北市與新北市 專人快速裝機區</h2>
-                <p class="text-sm text-slate-600 mt-1">只要位於以下台北與新北區域，歡迎直接來電或加 LINE 預約安裝時間</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Taipei City -->
-                <div class="bg-beidu-lightbg p-6 rounded-2xl border border-blue-100">
-                    <div class="flex items-center space-x-2 text-beidu-blue font-black text-lg mb-3">
-                        <i class="fa-solid fa-city"></i>
-                        <span>台北市服務涵蓋區域</span>
-                    </div>
-                    <div class="flex flex-wrap gap-2 text-xs font-bold text-slate-700">
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">大安區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">信義區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">中山區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">內湖區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">士林區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">文山區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">中正區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">萬華區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">松山區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">北投區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">南港區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">大同區</span>
-                    </div>
-                </div>
-
-                <!-- New Taipei City -->
-                <div class="bg-emerald-50/60 p-6 rounded-2xl border border-emerald-100">
-                    <div class="flex items-center space-x-2 text-emerald-800 font-black text-lg mb-3">
-                        <i class="fa-solid fa-building-user"></i>
-                        <span>新北市熱門服務區域</span>
-                    </div>
-                    <div class="flex flex-wrap gap-2 text-xs font-bold text-slate-700">
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">板橋區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">三重區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">新莊區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">中和區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">永和區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">新店區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">土城區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">蘆洲區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">汐止區</span>
-                        <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">及其他周邊地區</span>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="tel:0906682710" class="bg-brand-blue hover:bg-blue-700 text-white text-center font-bold py-2 rounded-xl text-sm transition flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-phone"></i> 打電話
+                        </a>
+                        <button onclick="copyPhone('0906682710')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2 rounded-xl text-sm transition flex items-center justify-center gap-1.5">
+                            <i class="fa-regular fa-copy"></i> 複製號碼
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-slate-50 py-12 px-4">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-2xl font-black text-center text-slate-800 mb-8">選擇北都有線電視 ‧ 找朱家樺申辦的 4 大優勢</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white p-5 rounded-xl border border-slate-200 text-center shadow-sm">
-                    <div class="w-12 h-12 bg-beidu-blue/10 text-beidu-blue rounded-full flex items-center justify-center mx-auto text-xl mb-3">
-                        <i class="fa-solid fa-piggy-bank"></i>
-                    </div>
-                    <h4 class="font-bold text-slate-800 mb-1">雙北省錢首選</h4>
-                    <p class="text-xs text-slate-500">年繳方案比傳統月繳更划算，一年輕鬆省數千元。</p>
-                </div>
-                <div class="bg-white p-5 rounded-xl border border-slate-200 text-center shadow-sm">
-                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-xl mb-3">
-                        <i class="fa-solid fa-hand-holding-dollar"></i>
-                    </div>
-                    <h4 class="font-bold text-slate-800 mb-1">三免大禮包</h4>
-                    <p class="text-xs text-slate-500">免安裝費、免線路費、免設定費，輕鬆升級無負擔。</p>
-                </div>
-                <div class="bg-white p-5 rounded-xl border border-slate-200 text-center shadow-sm">
-                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto text-xl mb-3">
-                        <i class="fa-solid fa-headset"></i>
-                    </div>
-                    <h4 class="font-bold text-slate-800 mb-1">業務專屬服務</h4>
-                    <p class="text-xs text-slate-500">業務朱家樺一對一諮詢，迅速安排雙北專人裝機。</p>
-                </div>
-                <div class="bg-white p-5 rounded-xl border border-slate-200 text-center shadow-sm">
-                    <div class="w-12 h-12 bg-beidu-cyan/10 text-beidu-cyan rounded-full flex items-center justify-center mx-auto text-xl mb-3">
-                        <i class="fa-solid fa-wifi"></i>
-                    </div>
-                    <h4 class="font-bold text-slate-800 mb-1">5G 雙頻 Wi-Fi</h4>
-                    <p class="text-xs text-slate-500">無線連線穩定順暢，全家影音娛樂順暢不延遲。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="py-12 px-4 max-w-3xl mx-auto">
-        <div class="text-center mb-8">
-            <span class="bg-slate-200 text-slate-700 font-bold text-xs px-3 py-1 rounded-full">申辦細節說明</span>
-            <h2 class="text-2xl font-black mt-2 text-slate-800">申辦注意事項與設備說明</h2>
-        </div>
-
-        <div class="space-y-4">
-            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-                <button onclick="toggleAccordion(1)" class="w-full text-left p-4 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50">
-                    <span class="flex items-center space-x-2">
-                        <i class="fa-solid fa-circle-info text-beidu-blue"></i>
-                        <span>關於網路設備押金</span>
-                    </span>
-                    <i id="acc-icon-1" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
-                </button>
-                <div id="acc-content-1" class="hidden p-4 border-t border-slate-100 text-sm text-slate-600 bg-slate-50">
-                    需收取網路設備押金 $1,500 元（合約到期設備完好退還時將全額退還押金）。
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-                <button onclick="toggleAccordion(2)" class="w-full text-left p-4 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50">
-                    <span class="flex items-center space-x-2">
-                        <i class="fa-solid fa-tv text-beidu-blue"></i>
-                        <span>電視機上盒押金說明</span>
-                    </span>
-                    <i id="acc-icon-2" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
-                </button>
-                <div id="acc-content-2" class="hidden p-4 border-t border-slate-100 text-sm text-slate-600 bg-slate-50">
-                    機上盒第 1 台免押金；第 2 台起每台需收取押金 $500 元。
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-                <button onclick="toggleAccordion(3)" class="w-full text-left p-4 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50">
-                    <span class="flex items-center space-x-2">
-                        <i class="fa-solid fa-user-check text-beidu-blue"></i>
-                        <span>申辦資格與新客戶優惠</span>
-                    </span>
-                    <i id="acc-icon-3" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
-                </button>
-                <div id="acc-content-3" class="hidden p-4 border-t border-slate-100 text-sm text-slate-600 bg-slate-50">
-                    詳細申辦資格與專屬加贈月數依北都有線電視營業條件為主，本專案適用於新申辦客戶，歡迎台北市與新北市住戶直接洽詢專員朱家樺：0906-766-093 或加 LINE (ID: 0906766093)。
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-8 bg-slate-100 text-slate-500 text-xs px-4 border-t border-slate-200">
-        <div class="max-w-5xl mx-auto">
-            <p class="font-bold text-slate-600 mb-2">台北與新北熱門搜尋關鍵字：</p>
-            <div class="flex flex-wrap gap-2">
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">北都有線電視</span>
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">台北市網路申辦</span>
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">新北市光纖網路</span>
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">第四台安裝推薦</span>
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">朱家樺 0906-766-093</span>
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">LINE ID: 0906766093</span>
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">大安/信義/中山區第四台</span>
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">內湖/士林/文山網路優惠</span>
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">板橋/三重/新莊寬頻網路</span>
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">中和/永和/新店網路改裝</span>
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">免安裝費寬頻</span>
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">200M $3600/年</span>
-                <span class="bg-white px-2 py-1 rounded border border-slate-200">120M $2600/年</span>
-            </div>
-            <p class="mt-4 text-center text-slate-400">© 北都有線電視推廣服務 ‧ 專責業務：朱家樺 (電話/LINE: 0906-766-093)</p>
-        </div>
-    </section>
-
-    <div class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 md:hidden shadow-2xl">
-        <div class="flex items-center space-x-2">
-            <div class="flex-1 pl-1">
-                <div class="text-[11px] font-bold text-slate-500">雙北負責業務 朱家樺</div>
-                <div class="text-sm font-black text-beidu-orange leading-tight">0906-766-093</div>
-                <div class="text-[10px] text-emerald-600 font-bold">LINE ID: 0906766093</div>
-            </div>
-            <a href="https://line.me/ti/p/~0906766093" target="_blank" class="bg-beidu-green hover:bg-emerald-600 text-white font-bold px-3 py-2.5 rounded-xl flex items-center space-x-1 shadow-md text-xs">
-                <i class="fa-brands fa-line text-lg"></i>
-                <span>加 LINE</span>
-            </a>
-            <a href="tel:0906766093" class="bg-beidu-orange hover:bg-orange-600 text-white font-bold px-3.5 py-2.5 rounded-xl flex items-center space-x-1 shadow-md text-xs">
-                <i class="fa-solid fa-phone-volume"></i>
-                <span>打電話</span>
+    <!-- QR Code Enlarged Modal -->
+    <div id="qrModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 p-4" onclick="closeQrModal()">
+        <div class="bg-white rounded-2xl p-6 max-w-sm w-full text-center relative shadow-2xl" onclick="event.stopPropagation()">
+            <button onclick="closeQrModal()" class="absolute top-3 right-3 text-slate-400 hover:text-slate-600 text-xl w-8 h-8 rounded-full flex items-center justify-center bg-slate-100">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h4 class="font-black text-slate-800 text-lg mb-1">朱家樺 (佳佳) LINE條碼</h4>
+            <p class="text-xs text-slate-500 mb-4">提示：打開 LINE > 點擊「加入好友」> 選擇「掃描」即可</p>
+            <img src="image_2.png" alt="佳佳 LINE QR Code 大圖" class="w-64 h-64 mx-auto rounded-xl border-2 border-slate-100 shadow-lg mb-4">
+            <a href="https://line.me/R/ti/p/0906766093" target="_blank" class="w-full bg-brand-line hover:bg-brand-lineHover text-white font-bold py-2.5 rounded-xl block text-sm transition">
+                <i class="fa-brands fa-line text-lg mr-1"></i> 手機直接點此開啟 LINE
             </a>
         </div>
     </div>
 
-    <!-- Toast Banner Notification -->
-    <div id="toast" class="fixed top-20 left-1/2 transform -translate-x-1/2 bg-slate-900/90 text-white text-sm font-bold px-6 py-3 rounded-full shadow-2xl opacity-0 pointer-events-none transition-opacity duration-300 z-50 flex items-center space-x-2">
-        <i class="fa-solid fa-check text-emerald-400"></i>
-        <span id="toast-msg">已複製！</span>
+    <!-- Desktop Floating Contact Buttons -->
+    <div class="hidden md:flex fixed bottom-6 right-6 z-40 flex-col gap-3">
+        <a href="https://line.me/R/ti/p/0906766093" target="_blank" class="bg-brand-line hover:bg-brand-lineHover text-white p-3.5 rounded-full shadow-2xl flex items-center gap-2 font-bold text-sm transition transform hover:scale-105 pulse-btn border-2 border-white">
+            <i class="fa-brands fa-line text-2xl"></i>
+            <span>私訊 LINE 佳佳</span>
+        </a>
+        <a href="https://line.me/R/ti/p/0906682710" target="_blank" class="bg-brand-line hover:bg-brand-lineHover text-white p-3.5 rounded-full shadow-2xl flex items-center gap-2 font-bold text-sm transition transform hover:scale-105 border-2 border-white">
+            <i class="fa-brands fa-line text-2xl"></i>
+            <span>私訊 LINE 小呂</span>
+        </a>
     </div>
 
+    <!-- Sticky Mobile Bottom Bar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-2.5 z-50 md:hidden shadow-2xl">
+        <div class="grid grid-cols-4 gap-1.5">
+            <a href="https://line.me/R/ti/p/0906766093" target="_blank" class="bg-brand-line text-white font-bold py-2 rounded-xl text-center text-xs flex flex-col items-center justify-center">
+                <i class="fa-brands fa-line text-lg mb-0.5"></i>
+                <span class="text-[10px]">LINE 佳佳</span>
+            </a>
+            <a href="tel:0906766093" class="bg-brand-red text-white font-bold py-2 rounded-xl text-center text-xs flex flex-col items-center justify-center">
+                <i class="fa-solid fa-phone text-sm mb-0.5"></i>
+                <span class="text-[10px]">電話 佳佳</span>
+            </a>
+            <a href="https://line.me/R/ti/p/0906682710" target="_blank" class="bg-brand-line text-white font-bold py-2 rounded-xl text-center text-xs flex flex-col items-center justify-center">
+                <i class="fa-brands fa-line text-lg mb-0.5"></i>
+                <span class="text-[10px]">LINE 小呂</span>
+            </a>
+            <a href="tel:0906682710" class="bg-brand-blue text-white font-bold py-2 rounded-xl text-center text-xs flex flex-col items-center justify-center">
+                <i class="fa-solid fa-phone text-sm mb-0.5"></i>
+                <span class="text-[10px]">電話 小呂</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed top-5 right-5 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl z-50 transition-all duration-300 opacity-0 transform translate-y-[-20px] pointer-events-none flex items-center gap-2 text-sm font-bold">
+        <i class="fa-solid fa-circle-check text-green-400"></i>
+        <span id="toastMsg">號碼已複製！</span>
+    </div>
+
+    <!-- JavaScript Interactions -->
     <script>
-        function copyPhoneNumber() {
-            copyToClipboard("0906766093", "電話號碼 (0906-766-093) 已複製到剪貼簿！");
-        }
-
-        function copyLineId() {
-            copyToClipboard("0906766093", "LINE ID (0906766093) 已複製！可開啟 LINE 搜尋加好友。");
-        }
-
-        function copyToClipboard(text, successMessage) {
-            const textarea = document.createElement("textarea");
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            textarea.select();
-            try {
-                document.execCommand('copy');
-                showToast(successMessage);
-            } catch (err) {
-                console.error('Copy failed:', err);
-            }
-            document.body.removeChild(textarea);
-        }
-
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            const toastMsg = document.getElementById('toast-msg');
-            toastMsg.textContent = message;
-            toast.classList.remove('opacity-0', 'pointer-events-none');
-            toast.classList.add('opacity-100');
-            setTimeout(() => {
-                toast.classList.remove('opacity-100');
-                toast.classList.add('opacity-0', 'pointer-events-none');
-            }, 2500);
-        }
-
-        function calculateSavings() {
-            const currentMonthlyCost = parseFloat(document.getElementById('currentCost').value) || 0;
-            const planAnnualCost = parseFloat(document.getElementById('selectedPlan').value);
+        function selectPlan(planName) {
+            const planSelect = document.getElementById('selectedPlan');
+            planSelect.value = planName;
             
-            const currentAnnualCost = currentMonthlyCost * 12;
-            const annualSavings = currentAnnualCost - planAnnualCost;
-            const monthlyEquivalent = Math.round(planAnnualCost / 12);
-
-            const savingsElem = document.getElementById('annualSavings');
-            const monthlyElem = document.getElementById('monthlyEquivalent');
-
-            if (annualSavings > 0) {
-                savingsElem.textContent = `$ ${annualSavings.toLocaleString()}`;
-                savingsElem.className = "text-4xl md:text-5xl font-black text-amber-300 my-2";
-            } else {
-                savingsElem.textContent = `$ 0`;
-                savingsElem.className = "text-4xl md:text-5xl font-black text-slate-300 my-2";
-            }
-
-            monthlyElem.textContent = `$ ${monthlyEquivalent}`;
+            const calcSection = document.getElementById('calculator');
+            calcSection.scrollIntoView({ behavior: 'smooth' });
+            
+            calcSection.classList.add('ring-4', 'ring-brand-blue/30');
+            setTimeout(() => {
+                calcSection.classList.remove('ring-4', 'ring-brand-blue/30');
+            }, 1500);
         }
 
-        function toggleAccordion(index) {
-            const content = document.getElementById(`acc-content-${index}`);
-            const icon = document.getElementById(`acc-icon-${index}`);
+        function calculateSavings(e) {
+            e.preventDefault();
+            const region = document.getElementById('regionSelect').value;
+            const plan = document.getElementById('selectedPlan').value;
+            const status = document.querySelector('input[name="contractStatus"]:checked').value;
 
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                icon.classList.add('rotate-180');
+            document.getElementById('resRegion').innerText = `${region} 專屬優惠試算結果`;
+            document.getElementById('resPlan').innerText = plan;
+
+            if (status === '未到期') {
+                document.getElementById('resComp').innerText = '享舊約轉約違約金全額/差額補償方案';
             } else {
-                content.classList.add('hidden');
-                icon.classList.remove('rotate-180');
+                document.getElementById('resComp').innerText = '首辦享免費升級與加碼贈送月份';
             }
+
+            let monthly = '$199';
+            if (plan.includes('200M')) {
+                monthly = '$250';
+            } else if (plan.includes('120M')) {
+                monthly = '$180';
+            } else {
+                monthly = '$135';
+            }
+
+            document.getElementById('resMonthly').innerHTML = `${monthly} <span class="text-xs font-normal text-slate-400">元/月起 (折算優惠後)</span>`;
+
+            const resultBox = document.getElementById('resultBox');
+            resultBox.classList.remove('hidden');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
-        window.onload = function() {
-            calculateSavings();
-        };
+        function copyPhone(phone) {
+            const tempInput = document.createElement('input');
+            tempInput.value = phone;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast(`已複製號碼: ${phone}`);
+        }
+
+        function openQrModal() {
+            const modal = document.getElementById('qrModal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        function closeQrModal() {
+            const modal = document.getElementById('qrModal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.innerText = msg;
+            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-[-20px]');
+            
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-[-20px]');
+            }, 3000);
+        }
     </script>
 </body>
 </html>
